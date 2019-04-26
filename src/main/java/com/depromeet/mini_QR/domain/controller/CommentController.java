@@ -35,7 +35,7 @@ public class CommentController {
 	
 	
 	@PostMapping(value = "/ranking")
-	public void getCommentRanking(Long seminarId) {
+	public RankingSendDto getCommentRanking(Long seminarId) {
     	////절대값 수정해주세요 :)
     	seminarId = (long) 13;
     		
@@ -52,5 +52,7 @@ public class CommentController {
     	
     	
     	System.out.println(rankingSendDto);
+    	
+    	return rankingSendDto;
     }
 }
